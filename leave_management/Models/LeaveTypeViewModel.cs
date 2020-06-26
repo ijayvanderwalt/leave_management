@@ -6,21 +6,14 @@ using System.Threading.Tasks;
 
 namespace leave_management.Models
 {
-    public class DetailsLeaveTypeViewModel
+    public class LeaveTypeViewModel
     {
 
         public int Id { get; set; }
-
+        [Required] //Validation Parameter i.e Not Null
         public string Name { get; set; }
-        public DateTime DateCreated { get; set; }
+        [Display(Name = "Date Created")]
+        public DateTime? DateCreated { get; set; }
     }
 
-    public class CreateLeaveTypeViewModel
-    {
-
-
-        [Required] //Validation Attribute
-        public string Name { get; set; }
-
-    }
 }

@@ -1,4 +1,4 @@
-﻿using AutoMapper;
+﻿using AutoMapper; 
 using leave_management.Data;
 using leave_management.Models;
 using System;
@@ -13,8 +13,8 @@ namespace leave_management.Mapping
     {
         public Maps()
         {
-            CreateMap<LeaveType, DetailsLeaveTypeViewModel>().ReverseMap(); //Reverse Map Allows mapping in both directions
-            CreateMap<LeaveType, CreateLeaveTypeViewModel>().ReverseMap();
+            CreateMap<LeaveType, LeaveTypeViewModel>().ReverseMap(); //Reverse Map Allows mapping in both directions
+            
             CreateMap<LeaveHistory, LeaveHistoryViewModel>().ReverseMap();
             CreateMap<LeaveAllocation, LeaveAllocationViewModel>().ReverseMap();
             CreateMap<LeaveAllocation, LeaveAllocationViewModel>().ReverseMap();
