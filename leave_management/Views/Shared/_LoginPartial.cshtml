@@ -1,15 +1,15 @@
-﻿@*@using Microsoft.AspNetCore.Identity
+﻿@using Microsoft.AspNetCore.Identity
 @using leave_management.Data
-@inject SignInManager<Employee> SignInManager
-@inject UserManager<Employee> UserManager*@
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
 
-@*<ul class="nav nav-pills nav-sidebar flex-column">
+<ul class="nav nav-pills nav-sidebar flex-column">
     @if (SignInManager.IsSignedIn(User))
     {
         <li class="nav-item">
             <a class="nav-link text-white" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">
                 <i class="fas fa-user-alt"></i>
-                <p>@User.Identity.Name!</p>
+                <p>Hello @User.Identity.Name!</p>
             </a>
         </li>
         <li class="nav-item">
@@ -38,4 +38,4 @@
             </a>
         </li>
     }
-</ul>*@
+</ul>
